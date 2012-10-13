@@ -1,4 +1,4 @@
-" https://github.com/sontek/dotfiles/
+" https://github.com/pade/vim-python.git
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -173,7 +173,8 @@ set pumheight=6             " Keep a small completion window
 
 
 """ Moving Around/Editing
-set cursorline              " have a line indicate the cursor location
+"set cursorline              " have a line indicate the cursor location
+"hi CursorLine cterm=underline ctermfg=4 gui=underline
 set ruler                   " show the cursor position all the time
 set nostartofline           " Avoid moving cursor to BOL when jumping around
 set virtualedit=block       " Let cursor move past the last char in <C-v> mode
@@ -184,7 +185,7 @@ set nowrap                  " don't wrap text
 set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
-set tabstop=4               " <tab> inserts 4 spaces 
+set tabstop=4               " <tab> inserts 4 spaces
 set shiftwidth=4            " but an indent level is 2 spaces wide.
 set softtabstop=4           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
@@ -226,7 +227,7 @@ set list
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
 set smartcase               " unless uppercase letters are used in the regex.
-set smarttab                " Handle tabs more intelligently 
+set smarttab                " Handle tabs more intelligently
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 
@@ -251,6 +252,9 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Select the item in the list with enter
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Open/close taglist window on <F12>
+nnoremap <silent> <F12> :TlistToggle<CR>
 
 " ==========================================================
 " Javascript
