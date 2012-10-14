@@ -73,3 +73,6 @@
 [submodule "_vim/bundle/template"]
 	path = _vim/bundle/template
 	url = https://github.com/vim-scripts/template.vim.git
+[submodule "_vim/bundle/c-vim"]
+	path = _vim/bundle/c-vim
+	url = https://github.com/vim-scripts/c.vim.git
