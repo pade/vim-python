@@ -111,12 +111,15 @@ map <c-h> <c-w>h
 imap <C-W> <C-O><C-W>
 
 " Open NerdTree
-map <leader>n :NERDTreeToggle<CR>
+map <F11> :NERDTreeToggle<CR>
 
 " Run command-t file search
 map <leader>f :CommandT<CR>
 " Ack searching
-nmap <leader>a <Esc>:Ack!
+" Set ack program
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+nmap <C-f> <Esc>:Ack!
 
 " Load the Gundo window
 "map <leader>g :GundoToggle<CR>
@@ -173,7 +176,7 @@ set pumheight=6             " Keep a small completion window
 
 
 """ Moving Around/Editing
-set cursorline              " have a line indicate the cursor location
+"set cursorline              " have a line indicate the cursor location
 set ruler                   " show the cursor position all the time
 set nostartofline           " Avoid moving cursor to BOL when jumping around
 set virtualedit=block       " Let cursor move past the last char in <C-v> mode
@@ -234,6 +237,7 @@ set incsearch               " Incrementally search while typing a /regex
 if has("gui_running")
     colorscheme darkblue
     hi CursorLine term=underline cterm=underline ctermfg=9 gui=underline guifg=NONE guibg=NONE  
+    hi SpecialKey term=bold ctermfg=1 guifg=#0030ff
 else
     colorscheme default
 endif
