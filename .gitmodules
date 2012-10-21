@@ -76,3 +76,6 @@
 [submodule "_vim/bundle/c-vim"]
 	path = _vim/bundle/c-vim
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule "_vim/bundle/cmake"]
+	path = _vim/bundle/cmake
+	url = https://github.com/jansenm/vim-cmake.git
