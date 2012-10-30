@@ -79,3 +79,6 @@
 [submodule "_vim/bundle/cmake"]
 	path = _vim/bundle/cmake
 	url = https://github.com/jansenm/vim-cmake.git
+[submodule "_vim/bundle/nerdcommenter"]
+	path = _vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
