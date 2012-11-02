@@ -236,9 +236,11 @@ set incsearch               " Incrementally search while typing a /regex
 
 """" Display
 if has("gui_running")
-    colorscheme darkblue
-    hi CursorLine term=underline cterm=underline ctermfg=9 gui=underline guifg=NONE guibg=NONE  
-    hi SpecialKey term=bold ctermfg=1 guifg=#0030ff
+    "colorscheme darkblue
+    "hi CursorLine term=underline cterm=underline ctermfg=9 gui=underline guifg=NONE guibg=NONE  
+    "hi SpecialKey term=bold ctermfg=1 guifg=#0030ff
+    colorscheme wombat-custom
+    set guifont=Inconsolata\ 10
 else
     colorscheme default
 endif
@@ -246,9 +248,6 @@ endif
 
 " Paste from clipboard
 map <leader>p "+p
-
-" Quit window on <leader>q
-nnoremap <leader>q :q<CR>
 
 " hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
