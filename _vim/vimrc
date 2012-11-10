@@ -236,11 +236,11 @@ set incsearch               " Incrementally search while typing a /regex
 
 """" Display
 if has("gui_running")
-    "colorscheme darkblue
-    "hi CursorLine term=underline cterm=underline ctermfg=9 gui=underline guifg=NONE guibg=NONE  
-    "hi SpecialKey term=bold ctermfg=1 guifg=#0030ff
-    colorscheme wombat-custom
-    set guifont=Inconsolata\ 10
+    colorscheme darkblue
+    hi CursorLine term=underline cterm=underline ctermfg=9 gui=underline guifg=NONE guibg=NONE  
+    hi SpecialKey term=bold ctermfg=1 guifg=#0030ff
+    "colorscheme wombat-custom
+    set guifont=Inconsolata\ 11
 else
     colorscheme default
 endif
@@ -288,7 +288,8 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 
-
+" Suppress trailing space
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 " Add the virtualenv's site-packages to vim path
 if has('python')
