@@ -240,7 +240,7 @@ if has("gui_running")
     hi CursorLine term=underline cterm=underline ctermfg=9 gui=underline guifg=NONE guibg=NONE  
     hi SpecialKey term=bold ctermfg=1 guifg=#0030ff
     "colorscheme wombat-custom
-    set guifont=Inconsolata\ 11
+    "set guifont=Inconsolata\ 11
 else
     colorscheme default
 endif
