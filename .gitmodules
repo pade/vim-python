@@ -58,9 +58,6 @@
 [submodule "_vim/bundle/tlib"]
 	path = _vim/bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule "_vim/bundle/snippets"]
-	path = _vim/bundle/snippets
-	url = https://github.com/honza/snipmate-snippets.git
 [submodule "_vim/bundle/coffee"]
 	path = _vim/bundle/coffee
 	url = https://github.com/kchmck/vim-coffee-script.git
